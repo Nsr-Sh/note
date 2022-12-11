@@ -2,6 +2,7 @@
   font-family: 'note';
   src: url(fonts/Stickynotes-ywLPd.otf);
 }
+
 * {
   box-sizing: border-box;
 }
@@ -30,7 +31,7 @@ header {
   overflow: hidden;
 }
 
-header > .container > a {
+header>.container>a {
   color: #fff;
   margin: 0;
   font-family: 'note';
@@ -40,7 +41,7 @@ header > .container > a {
   margin-top: 50px;
 }
 
-header > .container > img {
+header>.container>img {
   height: 250px;
   vertical-align: middle;
   float: right;
@@ -54,7 +55,7 @@ header > .container > img {
 }
 
 /*-------------------- add notes------------------- */
-#main .container .stickynotes {
+.stickynotes {
   background-color: #fff;
   padding: 33px 33px 20px;
   box-shadow: 0 3px 5px rgb(0 0 0 / 11%);
@@ -66,13 +67,13 @@ header > .container > img {
   margin-right: 35px;
 }
 
-#main .container .stickynotes:hover {
+.stickynotes:hover {
   box-shadow: 2px 7px 9px rgb(0 0 0 / 11%);
   /* cursor: move; */
 }
 
 /* input */
-#main .container .stickynotes > input {
+.stickynotes>input {
   width: 100%;
   margin-bottom: 10px;
   font-size: 23px;
@@ -83,23 +84,23 @@ header > .container > img {
   background-color: transparent;
 }
 
-#main .container .stickynotes input::placeholder,
-#main .container .stickynotes textarea::placeholder {
+.stickynotes input::placeholder,
+.stickynotes textarea::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
 
-#main .container .stickynotes > span {
+.stickynotes>span {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
 
-#main .container .stickynotes > .line {
+.stickynotes>.line {
   margin: 12px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.17);
 }
 
 /* textarea */
-#main .container .stickynotes > textarea {
+.stickynotes>textarea {
   border: none;
   outline: none;
   resize: none;
@@ -113,23 +114,25 @@ header > .container > img {
   overflow: auto;
 }
 
-#main .container .stickynotes > textarea::placeholder {
+.stickynotes>textarea::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 
 /* scrollbar */
-#main .container .stickynotes > textarea::-webkit-scrollbar {
+.stickynotes>textarea::-webkit-scrollbar {
   width: 7px;
   background-color: #cfcfcf;
 }
 
-#main .container .stickynotes > textarea::-webkit-scrollbar-thumb {
+.stickynotes>textarea::-webkit-scrollbar-thumb {
   background-color: #7c7c7c;
 }
+
 /* color palette */
-#main > .container > .stickynotes > .colorpalette {
+.stickynotes .colorpalette {
   padding: 15px;
   border-radius: 70px;
+  background-color: #fff;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -143,7 +146,12 @@ header > .container > img {
   /* pointer-events: none; */
 }
 
-#main > .container > .stickynotes > .colorpalette > div {
+.stickynotes .colorpalette.show {
+  transform: translatex(-50%) scale(1);
+
+}
+
+.stickynotes .colorpalette div {
   border-radius: 50%;
   background-color: rgb(200, 182, 228);
   width: 30px;
@@ -151,36 +159,42 @@ header > .container > img {
   margin: 0 4px;
   cursor: pointer;
 }
+
 /* colors */
-#main > .container > .stickynotes > .colorpalette > .color1 {
+.stickynotes>.colorpalette>.color1 {
   background-color: #fffa65;
 }
-#main > .container > .stickynotes > .colorpalette > .color2 {
+
+.stickynotes>.colorpalette>.color2 {
   background-color: #cd84f1;
 }
-#main > .container > .stickynotes > .colorpalette > .color3 {
+
+.stickynotes>.colorpalette>.color3 {
   background-color: #ffcccc;
 }
-#main > .container > .stickynotes > .colorpalette > .color4 {
+
+.stickynotes>.colorpalette>.color4 {
   background-color: #32ff7e;
 }
-#main > .container > .stickynotes > .colorpalette > .color5 {
+
+.stickynotes>.colorpalette>.color5 {
   background-color: #7efff5;
 }
+
 /* #main > .container > .stickynotes > .colorpalette > .color6 {
   background-color: #fff;
 } */
 
-#main > .container > .stickynotes > .colorpalette > div:hover {
+.stickynotes>.colorpalette>div:hover {
   border: 2px dashed #777;
 }
 
-#main .container .stickynotes > .icons {
+.stickynotes>.icons {
   text-align: center;
 }
 
 /* bottom icons */
-#main .container .stickynotes > .icons > i {
+.stickynotes>.icons>i {
   margin: 2px 7px;
   color: #000;
   opacity: 0.2;
@@ -188,21 +202,21 @@ header > .container > img {
   cursor: pointer;
 }
 
-#main .container .stickynotes > .icons > i:hover {
+.stickynotes>.icons>i:hover {
   opacity: 0.5;
 }
 
 /*-------------------- single note------------------- */
 
 /* title */
-#main .container section .stickynotes h2 {
+.stickynotes h2 {
   font-size: 23px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 /* text content */
-#main .container section .stickynotes p {
+.stickynotes p {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.69);
   margin-top: 0;
@@ -213,15 +227,15 @@ header > .container > img {
 }
 
 /* scrollbar */
-#main .container section .stickynotes > p::placeholder {
+.stickynotes>p::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 
-#main .container section .stickynotes > p::-webkit-scrollbar {
+.stickynotes>p::-webkit-scrollbar {
   width: 7px;
   background-color: #cfcfcf;
 }
 
-#main .container section .stickynotes > p::-webkit-scrollbar-thumb {
+.stickynotes>p::-webkit-scrollbar-thumb {
   background-color: #7c7c7c;
 }

@@ -1,11 +1,24 @@
 // variables
 
 const box = document.querySelector('#main .container'),
-  stickyNote = document.querySelector('.stickynotes'),
-  title = document.querySelector('.stickynotes>input'),
-  text = document.querySelector('.stickynotes>textarea'),
-  palette = document.querySelector('.colorpalette'),
-  iconPalette = document.querySelector('.fa-palette'),
-  iconEdit = document.querySelector('.fa-pencil'),
-  iconNew = document.querySelector('.fa-check'),
-  iconDelete = document.querySelector('.fa-trash-can');
+  stickyNote = document.querySelectorAll('.stickynotes'),
+  title = document.querySelectorAll('.stickynotes>input'),
+  text = document.querySelectorAll('.stickynotes>textarea'),
+  palette = document.querySelectorAll('.colorpalette'),
+  iconPalette = document.querySelectorAll('.fa-palette'),
+  iconEdit = document.querySelectorAll('.fa-pencil'),
+  iconNew = document.querySelectorAll('.fa-check'),
+  iconDelete = document.querySelectorAll('.fa-trash-can');
+
+// event open colorpolettes
+iconPalette.forEach(item => item.addEventListener('click', open))
+
+// open colorpolettes
+function open() {
+  let ele = this.parentElement.previousElementSibling;
+  if (ele.classList.contains('show')) {
+    ele.classList.remove('show')
+  } else {
+    ele.classList.add('show')
+  };
+}
