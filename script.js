@@ -10,10 +10,9 @@ const box = document.querySelector('#main .container'),
   iconNew = document.querySelectorAll('.fa-check'),
   iconDelete = document.querySelectorAll('.fa-trash-can');
 
-// event open colorpolettes
+// event: open colorpalettes
 iconPalette.forEach(item => item.addEventListener('click', open))
 
-// open colorpolettes
 function open() {
   let ele = this.parentElement.previousElementSibling;
   if (ele.classList.contains('show')) {
