@@ -21,3 +21,12 @@ function open() {
     ele.classList.add('show')
   };
 }
+
+// Change Color of Sticky Notes
+
+const colors = ['#fffa65', '#cd84f1', '#ffcccc', '#32ff7e', '#7efff5']
+
+palette.forEach(clr => {
+  let color = clr.children;
+  console.log(color);
+})
